@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+/* Global Styles */
+/* Variables */
+:root {
+    --white: #fff;
+    --accent: rgb(98, 106, 100);
+    --background: rgb(48, 53, 49);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Link Colors */
+a:link {
+    color: var(--white);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: var(--white);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--accent);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: var(--accent);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+/* End of Global Styles */
+
+/* Header Styles */
+header {
+    color: var(--white);
+    display: flex;
+    background-image: url(../img/tt-portfolio-header.png);
+	height: 60vh;
+    margin: 0;
+    padding: 0;
+    align-items: top;
+    justify-content: space-between;
+}
+
+nav {
+    font-size: 18pt;
+    text-transform: uppercase;
+    letter-spacing: 5pt;
+}
+
+.nav-links {
+    padding: 28px 0;
+    color: var(--white);
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+#logo {
+    float: left;
+    width: 300px;
+    padding: 20px;
+}
+/* End of Header Styles */
+
+/* Main Content Styles */
+/* 01 ABOUT SECTION */
+#about {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+#about h1 {
+    font-size: 50px;
+    padding-bottom: 5px;
+}
+
+#about h2 {
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+.name {
+   color: var(--accent); 
+}
+
+body {
+    color: var(--white);
+background-color: var(--background);
+}
+
+/* 02 PORTFOLIO SECTION */
+#portfolio {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--background);
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+/* 03 CONTACT SECTION */
+#contact h2 {
+    padding-bottom: 20px;
+}
+
+/* Contact Form */
+form {
+    max-width:1000px; margin:50px auto; 
+    /* margin-left: 100px;
+    margin-right: 100px; */
+}
+
+.feedback-input {
+  color:var(--white);
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #fff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid var(--white); }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background:var(--accent);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:var(--white);
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#cccccc; }
+/* End of Main Content Styles */
