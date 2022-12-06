@@ -8,6 +8,8 @@
     --white: #fff;
     --accent: rgb(98, 106, 100);
     --background: rgb(48, 53, 49);
+    --border: 2px solid var(--white);
+    --border-radius: 10px;
 }
 
 * {
@@ -47,7 +49,10 @@ header {
     color: var(--white);
     display: flex;
     background-image: url(../img/tt-portfolio-header.png);
-	height: 60vh;
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+	height: 50vh;
     margin: 0;
     padding: 0;
     align-items: top;
@@ -84,20 +89,18 @@ nav {
 
 /* Main Content Styles */
 /* 01 ABOUT SECTION */
-#about {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
+main {
+    margin: 2rem 2rem 2rem 2rem;
 }
 
-#about h1 {
+h1 {
     font-size: 50px;
     padding-bottom: 5px;
 }
 
-#about h2 {
+h2 {
     padding-bottom: 20px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .name {
@@ -106,35 +109,57 @@ nav {
 
 body {
     color: var(--white);
-background-color: var(--background);
+    background-color: var(--background);
 }
 
 /* 02 PORTFOLIO SECTION */
-#portfolio {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+#portfolio, #contact, #about {
+    margin: 2rem 0 4rem 0;
 }
 
-.flexbox {
+.cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    flex-direction: column;
 }
 
 .card {
-    background-color: var(--background);
     border: 2px solid var(--white);
     color: var(--white);
     border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    margin: 10px;
+    height: 300px;
+    position: relative;
+    background-color: var(--accent);
+}
+
+.card h3 {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    background-color: var(--white);
+    color: var(--background);
+    padding: 2px .5rem;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 2rem;
+}
+
+.card.card-focus {
+    background-color: var(--accent);
+    background-image: url(../img/tony-trocino-portfolio-screenshot.png);
+    background-size: cover;
+
 }
 
 /* 03 CONTACT SECTION */
-#contact h2 {
-    padding-bottom: 20px;
+#contact {
+    background-color: var(--accent);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    
 }
 
 /* Contact Form */
@@ -150,7 +175,7 @@ form {
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
-  background-color: transparent;
+  background-color: var(--background);
   border:2px solid #fff;
   transition: all 0.3s;
   padding: 13px;
@@ -160,7 +185,9 @@ form {
   outline:0;
 }
 
-.feedback-input:focus { border:2px solid var(--white); }
+.feedback-input:focus { 
+    border: 2px solid black;
+}
 
 textarea {
   height: 150px;
@@ -170,7 +197,7 @@ textarea {
 
 [type="submit"] {
   width: 100%;
-  background:var(--accent);
+  background:var(--background);
   border-radius:5px;
   border:0;
   cursor:pointer;
@@ -184,3 +211,31 @@ textarea {
 }
 [type="submit"]:hover { background:#cccccc; }
 /* End of Main Content Styles */
+
+@media screen and (min-width: 640px){
+    main {
+        margin: 2rem 4rem 2rem 4rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 2rem;
+        flex-direction: row;
+    }
+    
+    .card {
+        border: 2px solid var(--white);
+        color: var(--white);
+        border-radius: 10px;
+        height: 300px;
+        flex-grow: 1;
+    }
+    
+    .card.card-focus {
+        width: 100%;
+        flex-grow: 3;
+    }
+}
